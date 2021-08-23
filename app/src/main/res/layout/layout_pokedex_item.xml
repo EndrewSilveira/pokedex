@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvPokemonCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="8dp"
+    app:layout_constraintDimensionRatio="1:2"
+    app:cardBackgroundColor="#FAFAFA"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:background="@color/blue">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFavoriteIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:src="@drawable/ic_fav_empty"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlaceHolder"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0.3"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPokemonImage"
+            app:layout_constraintEnd_toEndOf="@+id/ivPokemonImage"
+            app:layout_constraintStart_toStartOf="@+id/ivPokemonImage"
+            app:layout_constraintTop_toTopOf="@+id/ivPokemonImage"
+            app:srcCompat="@drawable/ic_pokeball"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPokemonImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#CEFFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPokemonImage"
+            tools:text="# 001" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:lines="1"
+            android:maxLines="2"
+            android:textColor="#CEFFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCode"
+            tools:text="Bulbsaur" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtType1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/type_background"
+            android:gravity="center"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="2dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/txtType2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:text="Type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtType2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/type_background"
+            android:gravity="center"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="2dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtType1"
+            app:layout_constraintEnd_toEndOf="@+id/txtName"
+            app:layout_constraintStart_toEndOf="@id/txtType1"
+            app:layout_constraintTop_toTopOf="@+id/txtType1"
+            tools:text="Type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

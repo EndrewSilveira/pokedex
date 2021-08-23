@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDetailBack"
+    tools:background="@color/grass"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow"
+            app:tint="@color/white"
+            tools:ignore="VectorDrawableCompat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPokemonName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="26dp"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txtPokemonCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBackIcon"
+            tools:text="Bulbasaur" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPokemonCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPokemonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtPokemonName"
+            tools:text="#001" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtType1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/type_background"
+            android:gravity="center"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="3dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/txtType2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/txtPokemonName"
+            app:layout_constraintTop_toBottomOf="@+id/txtPokemonName"
+            tools:text="Type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtType2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/type_background"
+            android:gravity="center"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="3dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/txtType1"
+            app:layout_constraintStart_toEndOf="@id/txtType1"
+            app:layout_constraintTop_toTopOf="@+id/txtType1"
+            tools:text="Type" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPokemonPlaceHolder"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:alpha="0.3"
+            android:rotation="30"
+            android:translationY="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPokemonDetailImage"
+            app:layout_constraintEnd_toEndOf="@+id/ivPokemonDetailImage"
+            app:layout_constraintStart_toStartOf="@+id/ivPokemonDetailImage"
+            app:layout_constraintTop_toTopOf="@+id/ivPokemonDetailImage"
+            app:srcCompat="@drawable/ic_pokeball"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPokemonDetailImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            android:translationY="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtType1" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_detail_body"
+            android:isScrollContainer="false"
+            android:padding="8dp"
+            android:layout_marginTop="@dimen/margin_micro"
+            app:layout_constraintBottom_toTopOf="@+id/clDetailBody"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPokemonDetailImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabGravity="fill"
+            app:tabSelectedTextColor="@color/theme_red"
+            app:tabTextColor="@color/blackVariant" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDetailBody"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/whiteVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout">
+
+
+            <View
+                android:id="@+id/viewDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayWhiteVariant"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

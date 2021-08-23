@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_super_micro">4dp</dimen>
+    <dimen name="margin_micro">8dp</dimen>
+    <dimen name="margin_ten">10dp</dimen>
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_default">20dp</dimen>
+    <dimen name="margin_big">30dp</dimen>
+    <dimen name="margin_big_extra">40dp</dimen>
+
+    <dimen name="padding_extra_micro">2dp</dimen>
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_default_small">10dp</dimen>
+    <dimen name="padding_middle_default">15dp</dimen>
+    <dimen name="padding_default">20dp</dimen>
+    <dimen name="padding_big">30dp</dimen>
+
+    <dimen name="text_size_default">14sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+</resources>

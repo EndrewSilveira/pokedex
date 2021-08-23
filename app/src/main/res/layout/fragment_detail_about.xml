@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="?attr/colorOnBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/padding_default_small"
+        android:paddingHorizontal="@dimen/padding_default">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_super_micro"
+            android:layout_marginTop="@dimen/margin_default"
+            app:cardBackgroundColor="@color/whiteVariant2"
+            app:cardCornerRadius="@dimen/margin_micro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_default_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPokemonDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blackVariant"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="he seed on its back is filled with nutrients.\nThe seed grows steadily larger as its body grows." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAbilities"
+            style="@style/TextPokemonDetailTitle"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/detail_abilities"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvEggGroup"
+            app:layout_constraintStart_toEndOf="@+id/tvWeight"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAbilitiesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_ten"
+            android:layout_marginVertical="@dimen/margin_micro"
+            android:textColor="@color/blackVariant"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilities"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilities"
+            app:layout_constraintTop_toBottomOf="@+id/tvAbilities"
+            tools:text="Seed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeight"
+            style="@style/TextPokemonDetailTitle"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/detail_height"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvWeight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackVariant"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAbilitiesValue"
+            app:layout_constraintEnd_toEndOf="@+id/tvHeight"
+            app:layout_constraintStart_toStartOf="@+id/tvHeight"
+            app:layout_constraintTop_toTopOf="@+id/tvAbilitiesValue"
+            tools:text="0,70 m" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeight"
+            style="@style/TextPokemonDetailTitle"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/detail_weight"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvAbilities"
+            app:layout_constraintStart_toEndOf="@+id/tvHeight"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackVariant"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHeightValue"
+            app:layout_constraintEnd_toEndOf="@+id/tvWeight"
+            app:layout_constraintStart_toStartOf="@+id/tvWeight"
+            app:layout_constraintTop_toTopOf="@+id/tvHeightValue"
+            tools:text="6.9 kg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEggGroup"
+            style="@style/TextPokemonDetailTitle"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/detail_egg_group"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvAbilities"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEggGroupValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_ten"
+            android:layout_marginVertical="@dimen/margin_micro"
+            android:textColor="@color/blackVariant"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvEggGroup"
+            app:layout_constraintStart_toStartOf="@+id/tvEggGroup"
+            app:layout_constraintTop_toBottomOf="@+id/tvEggGroup"
+            tools:text="mONS" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_default"
+            android:background="@color/grayWhiteVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeightValue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeakness"
+            style="@style/TextPokemonDetailTitle"
+            android:layout_marginVertical="@dimen/margin_default"
+            android:text="@string/detail_weakness"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvHeight"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWeakness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:isScrollContainer="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeakness"
+            app:spanCount="5"
+            tools:listitem="@layout/adapter_weakness" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

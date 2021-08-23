@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Pokedexandroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/theme_red</item>
+        <item name="colorPrimaryVariant">@color/red</item>
+        <item name="colorOnPrimary">@color/blackVariant</item>
+        <item name="colorOnBackground">@color/whiteVariant</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme_red</item>
+        <item name="colorSecondaryVariant">@color/blackVariant</item>
+        <item name="colorOnSecondary">@color/blackVariant</item>
+        <item name="android:textColorPrimary">@color/blackVariant</item>
+        <item name="android:textColorSecondary">@color/gray</item>
+
+        <item name="android:actionMenuTextColor">@color/blackVariant</item>
+
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

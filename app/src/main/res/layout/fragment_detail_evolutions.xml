@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteVariant"
+    android:padding="@dimen/padding_default">
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvInProgress"-->
+<!--        style="@style/TextPokemonDetailTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/in_progress"-->
+<!--        android:textSize="@dimen/text_size_big"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        style="@style/TextPokemonDetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/evolution_chain"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBaseForm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFirstEvolutionArrow"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="@dimen/margin_small"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBaseForm"
+        app:layout_constraintEnd_toStartOf="@+id/ivFirstForm"
+        app:layout_constraintStart_toEndOf="@+id/ivBaseForm"
+        app:layout_constraintTop_toTopOf="@+id/ivBaseForm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFirstForm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBaseForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBaseForm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSecondForm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_big"
+        app:layout_constraintEnd_toEndOf="@+id/ivBaseForm"
+        app:layout_constraintStart_toStartOf="@+id/ivBaseForm"
+        app:layout_constraintTop_toBottomOf="@+id/ivBaseForm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSecondEvolutionArrow"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="@dimen/margin_small"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSecondForm"
+        app:layout_constraintEnd_toStartOf="@+id/ivThirdForm"
+        app:layout_constraintStart_toEndOf="@+id/ivSecondForm"
+        app:layout_constraintTop_toTopOf="@+id/ivSecondForm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivThirdForm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSecondForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivSecondForm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

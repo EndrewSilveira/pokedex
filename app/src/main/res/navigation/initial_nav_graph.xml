@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navHostMain"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.pokedex2.screen.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/activity_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pokedex2.screen.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_deailFragment"
+            app:destination="@id/deailFragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_movesFragment"
+            app:destination="@id/movesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movesFragment"
+        android:name="com.example.pokedex2.screen.moves.MovesFragment"
+        android:label="MovesFragment"
+        tools:layout="@layout/fragment_moves">
+    </fragment>
+
+    <fragment
+        android:id="@+id/deailFragment"
+        android:name="com.example.pokedex2.screen.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="pokemonQuery"
+            app:argType="com.example.pokedex2.domain.Pokemon"/>
+    </fragment>
+</navigation>

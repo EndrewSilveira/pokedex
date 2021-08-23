@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="pokedex">Pokedex</string>
+    <string name="moves">Moves</string>
+    <string name="search_for_pokemon">Pokemon</string>
+
+    <!-- detail stats -->
+    <string name="hp">HP</string>
+    <string name="number_example">50</string>
+    <string name="attack">Attack</string>
+    <string name="defense">Defense</string>
+    <string name="sp_atk">Sp.Atk</string>
+    <string name="sp_def">Sp.Def</string>
+    <string name="speed">Speed</string>
+    <string name="total">Total</string>
+    <!-- detail stats -->
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="no_pokemons_found">No Pokemons found</string>
+    <string name="press_back_again_to_exit">Please click BACK again to exit</string>
+
+    <string name="detail_height">Height</string>
+    <string name="detail_weight">Weight</string>
+    <string name="detail_abilities">Abilities</string>
+    <string name="detail_breeding">Breeding</string>
+    <string name="detail_gender">Gender</string>
+    <string name="detail_egg_group">Egg Group</string>
+    <string name="detail_weakness">Weakness</string>
+    <string name="in_progress">In Progress</string>
+
+
+    <string name="meters">%s m</string>
+    <string name="kilos">%s Kg</string>
+    <string name="evolution_chain">Evolution Chain</string>
+</resources>

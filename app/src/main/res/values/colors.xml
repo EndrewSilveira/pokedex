@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_red">#FF5B5B</color>
+    <color name="purple">#893EFF</color>
+    <color name="orange">#FD802E</color>
+    <color name="yellow">#FFB330</color>
+    <color name="red">#FF5252</color>
+    <color name="blue">#4573FF</color>
+
+    <color name="black">#212121</color>
+    <color name="blackVariant">#393939</color>
+    <color name="gray">#616161</color>
+    <color name="grayVariant">#8E8E8E</color>
+    <color name="grayWhiteVariant">#FDC5C5C5</color>
+    <color name="grayWhiteVariant2">#FDE1E1E1</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteVariant">#F1F1F1</color>
+    <color name="whiteVariant2">#EDEDED</color>
+
+    <color name="translucent">#40FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="grass">#9bcc50</color>
+    <color name="grass_bd">#3EDA89</color>
+
+    <color name="bug">#729f3f</color>
+    <color name="bug_bd">#87BA4C</color>
+
+    <color name="fire">#fd7d24</color>
+    <color name="fire_bd">#FA8478</color>
+
+    <color name="water">#4592c4</color>
+    <color name="water_bd">#48A2DC</color>
+
+    <color name="poison">#b97fc9</color>
+    <color name="poison_bd">#CA92DA</color>
+
+    <color name="normal">#8F999A</color>
+    <color name="normal_bd">#99ACAE</color>
+
+    <color name="electric">#eed535</color>
+    <color name="electric_bd">#ECD64C</color>
+
+    <color name="fairy">#FF8FDD</color>
+    <color name="fairy_bd">#FF79DE</color>
+
+    <color name="fighting">#d56723</color>
+    <color name="fighting_bd">#F48540</color>
+
+    <color name="psychic">#f366b9</color>
+    <color name="psychic_bd">#D545D3</color>
+
+    <color name="rock">#a38c21</color>
+    <color name="rock_bd">#CAA06E</color>
+
+    <color name="steel">#9eb7b8</color>
+    <color name="steel_bd">#CAEAEC</color>
+
+    <color name="ghost">#7b62a3</color>
+    <color name="ghost_bd">#9D7BD3</color>
+
+    <color name="ice">#51c4e7</color>
+    <color name="ice_bd">#67BBD5</color>
+
+    <color name="flying_top">#3dc7ef</color>
+    <color name="flying_bd">#7DB2C1</color>
+    <color name="flying_bottom">#bdb9b8</color>
+
+    <color name="ground_top">#f7de3f</color>
+    <color name="ground_bottom">#ab9842 </color>
+    <color name="ground_bd">#a38c21</color>
+
+    <color name="dragon_top">#53a4cf</color>
+    <color name="dragon_bottom">#f16e57</color>
+    <color name="dragon_bd">#FF6565</color>
+</resources>
