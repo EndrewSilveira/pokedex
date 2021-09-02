@@ -22,7 +22,7 @@ data class PokemonApiResult(
     val height: Int,
     val weight: Int,
     val abilities: List<Ability>?,
-    val moves: List<Move>?,
+    val moves: List<PokemonMove>?,
     val species: PokemonSpecies,
     val types: List<PokemonTypeSlot>,
     val stats: List<PokemonStats>,

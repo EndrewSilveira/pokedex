@@ -3,14 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clDetailBack"
-    tools:background="@color/grass"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:background="@color/grass">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/mlDetailMotion"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_detail_scene">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivBackIcon"
@@ -22,6 +24,17 @@
             app:srcCompat="@drawable/ic_back_arrow"
             app:tint="@color/white"
             tools:ignore="VectorDrawableCompat" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDetailFavouriteIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_fav_empty"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBackIcon" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txtPokemonName"
@@ -110,41 +123,50 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtType1" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/drawable_detail_body"
-            android:isScrollContainer="false"
-            android:padding="8dp"
-            android:layout_marginTop="@dimen/margin_micro"
-            app:layout_constraintBottom_toTopOf="@+id/clDetailBody"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivPokemonDetailImage"
-            app:layout_constraintStart_toStartOf="parent"
-            app:tabGravity="fill"
-            app:tabSelectedTextColor="@color/theme_red"
-            app:tabTextColor="@color/blackVariant" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clDetailBody"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/whiteVariant"
+            android:background="@drawable/drawable_detail_body"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabLayout">
+            app:layout_constraintTop_toBottomOf="@id/ivPokemonDetailImage">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivArrowUp"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="@dimen/margin_super_micro"
+                android:src="@drawable/ic_maximize"
+                android:tint="@color/grayWhiteVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_detail_body"
+                android:isScrollContainer="false"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivArrowUp"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/theme_red"
+                app:tabTextColor="@color/blackVariant" />
 
             <View
                 android:id="@+id/viewDivider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/grayWhiteVariant"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
@@ -156,5 +178,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

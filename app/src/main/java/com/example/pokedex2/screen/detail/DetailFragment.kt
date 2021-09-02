@@ -1,8 +1,11 @@
 package com.example.pokedex2.screen.detail
 
 import android.os.Build
+import android.view.MotionEvent
+import android.view.View
 import android.view.WindowInsetsController
 import androidx.annotation.RequiresApi
+import androidx.core.view.ViewCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.navArgs
@@ -52,6 +55,15 @@ class DetailFragment: BaseFragment() {
         ivBackIcon.setOnClickListener {
             popBackStack()
         }
+
+        ivArrowUp.setOnClickListener {
+            if(mlDetailMotion.currentState == mlDetailMotion.startState) {
+                mlDetailMotion.transitionToEnd()
+            } else {
+                mlDetailMotion.transitionToStart()
+            }
+            ivArrowUp.animate().setDuration(mlDetailMotion.transitionTimeMs).start()
+        }
     }
     override fun initObservers() {
     }
@@ -97,6 +109,13 @@ class DetailFragment: BaseFragment() {
         tabLayout.addTab(tabLayout.newTab().setText("Base Status"))
         tabLayout.addTab(tabLayout.newTab().setText("Evolution"))
         tabLayout.addTab(tabLayout.newTab().setText("Moves"))
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            tabLayout.isNestedScrollingEnabled = false
+            tabLayout.isScrollContainer = false
+        } else {
+            ViewCompat.setNestedScrollingEnabled(tabLayout, true)
+        }
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {

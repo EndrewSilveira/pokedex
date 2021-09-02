@@ -46,9 +46,14 @@ class SplashFragment : BaseFragment() {
             .setDuration(TIME_ANIMATION).start()
     }
 
+    override fun onPause() {
+        super.onPause()
+        ivSplashIcon.animate().cancel()
+    }
+
     override fun onResume() {
         super.onResume()
-        splashAnimation()
+        ivSplashIcon.animate().start()
     }
 
     override fun initObservers() {}

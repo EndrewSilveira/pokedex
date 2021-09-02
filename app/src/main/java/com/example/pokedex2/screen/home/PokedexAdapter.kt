@@ -41,8 +41,8 @@ class PokedexAdapter(val favorited: MutableList<Pokemon>): BaseAdapter<Pokemon>(
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun <VH : RecyclerView.ViewHolder> onBindViewHolderBase(holder: VH, position: Int) {
         if (holder is ViewHolder) {
-            val filledHeart = ContextCompat.getDrawable(holder.itemView.context, R.drawable.ic_fav_filled)
             val pokemonQuery = data[position]
+            val filledHeart = ContextCompat.getDrawable(holder.itemView.context, R.drawable.ic_fav_filled)
 
             pokemonQuery?.let {
 

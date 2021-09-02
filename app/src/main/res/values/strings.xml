@@ -34,4 +34,6 @@
     <string name="meters">%s m</string>
     <string name="kilos">%s Kg</string>
     <string name="evolution_chain">Evolution Chain</string>
+    <string name="level_learned_at">level learned at: </string>
+    <string name="move_learn_method">learn method: </string>
 </resources>

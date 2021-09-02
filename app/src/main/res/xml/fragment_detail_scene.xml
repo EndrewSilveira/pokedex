@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="500"/>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/widget" />
+        <Constraint
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPokemonPlaceHolder"
+            android:id="@+id/clDetailBody" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ivDetailFavIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivBackIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBackIcon"
+            app:layout_editor_absoluteY="16dp"
+            app:layout_constraintStart_toEndOf="@+id/ivBackIcon" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/appCompatImageView" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ivDetailFavouriteIcon"
+            app:layout_editor_absoluteX="411dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBackIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivBackIcon" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/widget" />
+        <Constraint
+            android:id="@+id/ivArrowUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_super_micro"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:tint="@color/grayWhiteVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtType1"
+            android:id="@+id/clDetailBody" />
+    </ConstraintSet>
+</MotionScene>
